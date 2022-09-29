@@ -1,3 +1,17 @@
+:root {
+  --gray: #817d92;
+  --dark-gray: #24232c;
+  --very-dark-gray: #18171f;
+  --neon-green: #a4ffaf;
+  --red: #f64a4a;
+  --orange: #fb7c58;
+  --yellow: #f8cd65;
+  --almost-white: #e6e5ea;
+  --heading-l: 32px;
+  --heading-m: 24px;
+  --body: 18px;
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -28,7 +42,8 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   background-color: black;
-  font-family: 'JetBrains Mono', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: bold;
 }
 /*
   6. Improve media defaults
@@ -68,4 +83,8 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+#app {
+  height: 100%;
 }
