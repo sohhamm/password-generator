@@ -24,7 +24,7 @@
 </script>
 
 <div class="box">
-  <div class="topBox">
+  <div class="top-box">
     <p class="info">Character Length</p>
     <p class="length">{length}</p>
   </div>
@@ -49,7 +49,7 @@
     margin-top: 24px;
   }
 
-  .topBox {
+  .top-box {
     display: flex;
     align-items: center;
     justify-content: space-between;

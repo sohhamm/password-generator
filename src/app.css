@@ -88,3 +88,18 @@ h6 {
 #app {
   height: 100%;
 }
+
+.label {
+  color: var(--almost-white) !important;
+}
+
+.input:not(:checked) {
+  background-color: transparent !important;
+  border: 1.5px solid white !important;
+}
+
+.input:checked {
+  /* background-color: var(--neon-green); */
+  border: 1.5px solid white;
+  filter: invert(0.5);
+}
