@@ -6,6 +6,7 @@ export let password;
     <p>
         {password}
     </p>
+    <img src='src/assets/icon-copy.svg' alt='copy' />
 </section>
 
 
@@ -23,5 +24,10 @@ export let password;
     p{
         font-size: var(--heading-l);
         color:var(--almost-white);
+    }
+
+    img:hover{
+        filter:  brightness(0) invert(1);
+        cursor: pointer;
     }
 </style>
