@@ -45,7 +45,7 @@
 
 <style>
   .box {
-    margin-bottom: 32px;
+    margin-bottom: 10px;
     margin-top: 24px;
   }
 

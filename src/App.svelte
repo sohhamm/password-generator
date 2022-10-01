@@ -2,6 +2,7 @@
   import CharacterLength from './lib/CharacterLength.svelte'
   import CheckboxOptions from './lib/CheckboxOptions.svelte'
   import Password from './lib/Password.svelte'
+  import Strength from './lib/Strength.svelte'
 
   let password = 'dfdas43x'
   let characterLength = 10
@@ -15,6 +16,8 @@
     <CharacterLength length={characterLength} />
 
     <CheckboxOptions />
+
+    <Strength />
   </div>
 </main>
 
