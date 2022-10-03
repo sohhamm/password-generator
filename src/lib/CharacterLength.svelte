@@ -1,7 +1,7 @@
 <script lang="ts">
   import {onMount} from 'svelte'
 
-  export let length
+  export let characterLength
   let input
 
   onMount(() => {
@@ -16,7 +16,7 @@
   function getBackgroundSize(input) {
     const min = +input.min || 1
     const max = +input.max || 20
-    const value = +length
+    const value = +characterLength
     const size = ((value - min) / (max - min)) * 100
 
     return size
@@ -26,7 +26,7 @@
 <div class="box">
   <div class="top-box">
     <p class="info">Character Length</p>
-    <p class="length">{length}</p>
+    <p class="length">{characterLength}</p>
   </div>
   <div class="slider-container">
     <label for="slider" class="hidden-label" />
@@ -36,7 +36,7 @@
       id="slider"
       min="1"
       max="20"
-      bind:value={length}
+      bind:value={characterLength}
       on:input={setBackgroundSize}
       bind:this={input}
     />
@@ -66,7 +66,7 @@
     color: var(--neon-green);
   }
 
-  /* --SLIDER GLOBAL STYLES-- */
+  /* SLIDER START */
 
   .slider-container {
     display: flex;
@@ -94,9 +94,9 @@
     outline: none;
   }
 
-  /* --SLIDER GLOBAL STYLES-- */
+  /* SLIDER END */
 
-  /* --CHROME SLIDER STYLES-- */
+  /* SLIDER CHROME START */
 
   input[type='range']::-webkit-slider-runnable-track {
     background: linear-gradient(to right, var(--neon-green), var(--neon-green)),
@@ -121,9 +121,9 @@
     border: 2px solid var(--neon-green);
   }
 
-  /* --CHROME SLIDER STYLES-- */
+  /* SLIDER CHROME END */
 
-  /* --FIREFOX SLIDER STYLES-- */
+  /* SLIDER FIREFOX START */
 
   input[type='range']::-moz-range-track {
     background-color: var(--very-dark-gray);
@@ -159,5 +159,5 @@
     border: 2px solid var(--neon-green);
   }
 
-  /* --FIREFOX SLIDER STYLES-- */
+  /* SLIDER FIREFOX END */
 </style>

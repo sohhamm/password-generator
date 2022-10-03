@@ -1,22 +1,5 @@
 <script lang="ts">
-  let options = [
-    {
-      info: 'Include Uppercase Letters',
-      enabled: true,
-    },
-    {
-      info: 'Include Lowercase Letters',
-      enabled: true,
-    },
-    {
-      info: 'Include Numbers',
-      enabled: true,
-    },
-    {
-      info: 'Include Symbols',
-      enabled: false,
-    },
-  ]
+  export let options
 </script>
 
 <div class="box">

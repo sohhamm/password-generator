@@ -40,7 +40,12 @@
         <div class="bar bar-s" />
       </div>
     {:else}
-      <div />
+      <div class="bars">
+        <div class="bar" />
+        <div class="bar" />
+        <div class="bar" />
+        <div class="bar" />
+      </div>
     {/if}
   </div>
 </div>
