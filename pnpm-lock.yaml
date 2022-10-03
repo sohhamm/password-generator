@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@sveltejs/vite-plugin-svelte': ^1.0.2
   '@tsconfig/svelte': ^3.0.0
+  '@zerodevx/svelte-toast': ^0.7.2
   svelte: ^3.49.0
   svelte-check: ^2.8.1
   svelte-preprocess: ^4.10.7
@@ -17,6 +18,7 @@ dependencies:
 devDependencies:
   '@sveltejs/vite-plugin-svelte': 1.0.8_svelte@3.50.1+vite@3.1.3
   '@tsconfig/svelte': 3.0.0
+  '@zerodevx/svelte-toast': 0.7.2
   svelte: 3.50.1
   svelte-check: 2.9.0_svelte@3.50.1
   svelte-preprocess: 4.10.7_iprco5tylfmvffqgrvqxc46njy
@@ -128,6 +130,10 @@ packages:
     resolution: {integrity: sha512-BPdoIt1lfJ6B7rw35ncdwBZrAssjcwzI5LByIrYs+tpXlj/CAkuVdRsgZDdP4lq5EjyWzwxZCqAoFyHKFwp32g==}
     dependencies:
       '@types/node': 18.7.21
+    dev: true
+
+  /@zerodevx/svelte-toast/0.7.2:
+    resolution: {integrity: sha512-vWiY6IqsstcOoQ8PFBuFuxgPkj1JFAGhUF9gC7wLx7c5A9SSfdtxWs/39ekGSIeyJK0yqWhTcmzGrCEWSELzDw==}
     dev: true
 
   /anymatch/3.1.2:

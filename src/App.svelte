@@ -1,10 +1,11 @@
 <script lang="ts">
+  import zxcvbn from 'zxcvbn'
   import CharacterLength from './lib/CharacterLength.svelte'
   import CheckboxOptions from './lib/CheckboxOptions.svelte'
   import Password from './lib/Password.svelte'
   import Strength from './lib/Strength.svelte'
-  import zxcvbn from 'zxcvbn'
-  import {uppercaseArr, lowercaseArr, numbersArr, symbolsArr, getRandomInt} from './utils'
+  import {SvelteToast} from '@zerodevx/svelte-toast'
+  import {uppercaseArr, lowercaseArr, numbersArr, symbolsArr, getRandomInt, toast} from './utils'
   import {StrengthEnum} from './types'
 
   let password = 'P4$5W0rD!'
@@ -42,7 +43,12 @@
 
   const handleGenerate = () => {
     if (options.every(option => !option.enabled)) {
-      alert('Please select atleast one checkbox')
+      toast('Please select atleast one checkbox ☑️', 'error')
+      return
+    }
+
+    if (characterLength <= 3) {
+      toast('Password length must be greater than 3 characters', 'error')
       return
     }
     const aggregateArr = []
@@ -77,6 +83,11 @@
         break
     }
     opacity = 1
+
+    // easter egg
+    if (score === 4) {
+      toast('Generated a secure password! 🥳')
+    }
   }
 </script>
 
@@ -100,6 +111,7 @@
       GENERATE <img src={imgSrc} alt="right icon" class="right-icon" />
     </button>
   </div>
+  <SvelteToast />
 </main>
 
 <style>

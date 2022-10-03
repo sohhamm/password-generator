@@ -99,6 +99,5 @@ h6 {
 }
 
 .input:checked {
-  /* background-color: var(--neon-green); */
   border: 1.5px solid white;
 }

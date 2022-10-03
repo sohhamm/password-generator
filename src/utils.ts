@@ -1,3 +1,5 @@
+import {toast as _toast} from '@zerodevx/svelte-toast'
+
 export const uppercaseArr = [
   'A',
   'B',
@@ -26,6 +28,7 @@ export const uppercaseArr = [
   'Y',
   'Z',
 ]
+
 export const lowercaseArr = [
   'a',
   'b',
@@ -78,4 +81,21 @@ export function getRandomInt(min, max) {
   min = Math.ceil(min)
   max = Math.floor(max)
   return Math.floor(Math.random() * (max - min) + min)
+}
+
+export const toast = (htmlStr, type = 'success') =>
+  _toast.push(htmlStr, {
+    theme: {
+      '--toastBackground': 'var(--dark-gray)',
+      '--toastBarBackground': getToastBarBg(type),
+    },
+  })
+
+const getToastBarBg = type => {
+  switch (type) {
+    case 'success':
+      return '#2F855A'
+    case 'error':
+      return '#C53030'
+  }
 }
