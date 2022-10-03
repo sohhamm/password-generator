@@ -3,9 +3,15 @@
   import CheckboxOptions from './lib/CheckboxOptions.svelte'
   import Password from './lib/Password.svelte'
   import Strength from './lib/Strength.svelte'
+  import {StrengthEnum} from './types'
 
-  let password = 'dfdas43x'
+  let password = 'PTx1f5DaFX'
   let characterLength = 10
+
+  let strength: StrengthEnum = StrengthEnum.s
+
+  let isHovering = false
+  $: imgSrc = isHovering ? 'src/assets/arrow-right-hover.svg' : 'src/assets/arrow-right.svg'
 </script>
 
 <main>
@@ -17,7 +23,15 @@
 
     <CheckboxOptions />
 
-    <Strength />
+    <Strength {strength} />
+
+    <button
+      class="generate"
+      on:mouseenter={() => (isHovering = true)}
+      on:mouseleave={() => (isHovering = false)}
+    >
+      GENERATE <img src={imgSrc} alt="right icon" class="right-icon" />
+    </button>
   </div>
 </main>
 
@@ -42,5 +56,28 @@
     background-color: var(--dark-gray);
     padding: 32px;
     padding-top: 0px;
+  }
+
+  .generate {
+    width: 100%;
+    background-color: var(--neon-green);
+    color: var(--dark-gray);
+    margin-top: 32px;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+  }
+
+  .generate:hover {
+    border: 2px solid var(--neon-green);
+    color: var(--neon-green);
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .right-icon {
+    margin-left: 24px;
   }
 </style>

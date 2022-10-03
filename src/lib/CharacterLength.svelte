@@ -12,11 +12,11 @@
     event.target.style.setProperty('--background-size', `${getBackgroundSize(event.target)}%`)
   }
 
+  // for input range left side
   function getBackgroundSize(input) {
     const min = +input.min || 1
     const max = +input.max || 20
     const value = +length
-    // for input range left side
     const size = ((value - min) / (max - min)) * 100
 
     return size
