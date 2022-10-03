@@ -160,4 +160,29 @@
   }
 
   /* SLIDER FIREFOX END */
+
+  @media (max-width: 600px) {
+    .box {
+      margin-bottom: 8px;
+      margin-top: 16px;
+    }
+
+    .top-box {
+      margin-bottom: 16px;
+    }
+
+    .info {
+      font-size: 18px;
+      color: var(--almost-white);
+    }
+
+    .length {
+      font-size: var(--heading-m);
+      color: var(--neon-green);
+    }
+
+    #slider {
+      margin-bottom: 1.3rem;
+    }
+  }
 </style>

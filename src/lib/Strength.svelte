@@ -62,7 +62,7 @@
   }
 
   p {
-    font-size: 18px;
+    font-size: var(--body);
     color: var(--gray);
   }
 
@@ -106,5 +106,14 @@
   .bar-s {
     background-color: var(--neon-green);
     border-color: var(--neon-green);
+  }
+
+  @media (max-width: 600px) {
+    .box {
+      padding: 16px;
+    }
+    .info {
+      font-size: var(--body);
+    }
   }
 </style>

@@ -14,7 +14,7 @@
   let strength: StrengthEnum
 
   let isHovering = false
-  $: imgSrc = isHovering ? 'src/assets/arrow-right-hover.svg' : 'src/assets/arrow-right.svg'
+  $: imgSrc = isHovering ? 'assets/arrow-right-hover.svg' : 'assets/arrow-right.svg'
 
   let options = [
     {
@@ -132,7 +132,6 @@
   .container {
     max-width: 540px;
     width: 100%;
-    /* height: 632px; */
     background-color: var(--dark-gray);
     padding: 32px;
     padding-top: 0px;
@@ -158,5 +157,26 @@
 
   .right-icon {
     margin-left: 24px;
+  }
+
+  @media (max-width: 600px) {
+    main {
+      padding: 0px 16px;
+    }
+
+    h1 {
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    .container {
+      padding: 16px;
+      padding-top: 0px;
+    }
+
+    .generate {
+      margin-top: 16px;
+      padding: 16px;
+    }
   }
 </style>

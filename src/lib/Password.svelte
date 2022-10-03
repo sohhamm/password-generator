@@ -19,11 +19,7 @@
   <p style:opacity>
     {password}
   </p>
-  <img src="src/assets/icon-copy.svg" alt="copy password" on:click={handleCopyToClipboard} />
-
-  <!-- <div>
-    ${msg}
-  </div> -->
+  <img src="assets/icon-copy.svg" alt="copy password" on:click={handleCopyToClipboard} />
 </section>
 
 <style>
@@ -44,5 +40,16 @@
   img:hover {
     filter: brightness(0) invert(1);
     cursor: pointer;
+  }
+
+  @media (max-width: 600px) {
+    section {
+      border-bottom-width: 16px;
+      margin: 0 -16px;
+      padding: 19px 16px;
+    }
+    p {
+      font-size: var(--heading-m);
+    }
   }
 </style>
