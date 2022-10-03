@@ -15,15 +15,15 @@
   }
 </script>
 
-<section>
+<div>
   <p style:opacity>
     {password}
   </p>
   <img src="assets/icon-copy.svg" alt="copy password" on:click={handleCopyToClipboard} />
-</section>
+</div>
 
 <style>
-  section {
+  div {
     border-bottom: 24px solid black;
     display: flex;
     align-items: center;
@@ -43,7 +43,7 @@
   }
 
   @media (max-width: 600px) {
-    section {
+    div {
       border-bottom-width: 16px;
       margin: 0 -16px;
       padding: 19px 16px;

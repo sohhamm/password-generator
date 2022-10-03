@@ -5,8 +5,14 @@
 <div class="box">
   {#each options as option}
     <div class="checkbox-container">
-      <input type="checkbox" name={option.info} id={option.info} bind:checked={option.enabled} />
-      <label for={option.info}>{option.info}</label>
+      <input
+        type="checkbox"
+        name={option.info}
+        id={option.id}
+        bind:checked={option.enabled}
+        aria-label={option.info}
+      />
+      <label for={option.id}>{option.info}</label>
     </div>
   {/each}
 </div>

@@ -18,21 +18,25 @@
 
   let options = [
     {
+      id: 'uppercase',
       info: 'Include Uppercase Letters',
       enabled: false,
       arrKey: uppercaseArr,
     },
     {
+      id: 'lowercase',
       info: 'Include Lowercase Letters',
       enabled: false,
       arrKey: lowercaseArr,
     },
     {
+      id: 'numbers',
       info: 'Include Numbers',
       enabled: false,
       arrKey: numbersArr,
     },
     {
+      id: 'symbols',
       info: 'Include Symbols',
       enabled: false,
       arrKey: symbolsArr,
