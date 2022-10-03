@@ -7,8 +7,7 @@
   import {uppercaseArr, lowercaseArr, numbersArr, symbolsArr, getRandomInt} from './utils'
   import {StrengthEnum} from './types'
 
-  const emptyPassword = 'P4$5W0rD!'
-  let password = emptyPassword
+  let password = 'P4$5W0rD!'
   let characterLength = 1
 
   let strength: StrengthEnum
@@ -42,8 +41,7 @@
   let opacity = 0.25
 
   const handleGenerate = () => {
-    const isDisabled = options.every(option => !option.enabled)
-    if (isDisabled) {
+    if (options.every(option => !option.enabled)) {
       alert('Please select atleast one checkbox')
       return
     }
@@ -60,7 +58,9 @@
         return aggregateArr[randIdx]
       })
       .join('')
+
     const {score} = zxcvbn(password)
+
     switch (score) {
       case 0:
       case 1:
@@ -85,7 +85,7 @@
   <div class="container">
     <Password {password} {opacity} />
 
-    <CharacterLength {characterLength} />
+    <CharacterLength bind:characterLength />
 
     <CheckboxOptions {options} />
 
@@ -118,8 +118,9 @@
     margin-bottom: 31px;
   }
   .container {
-    width: 540px;
-    height: 632px;
+    max-width: 540px;
+    width: 100%;
+    /* height: 632px; */
     background-color: var(--dark-gray);
     padding: 32px;
     padding-top: 0px;
@@ -134,11 +135,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none;
+    border: 2px solid var(--neon-green);
   }
 
   .generate:hover {
-    border: 2px solid var(--neon-green);
     color: var(--neon-green);
     background-color: transparent;
     cursor: pointer;
